@@ -1,0 +1,22 @@
+.form {
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 10px;
+}
+
+
+.userInput {
+    font-size: x-large;
+    display: flex;
+    gap: 5px;
+}
+
+.pinInput {
+    font-size: x-large;
+    display: flex;
+    gap: 5px;
+
+}

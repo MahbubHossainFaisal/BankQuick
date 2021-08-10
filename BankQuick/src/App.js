@@ -1,6 +1,5 @@
 import React from 'react';
-import Cards from './Card/Card'
-import Header from './Header/Header'
+import Header from './Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootswatch/dist/lumen/bootstrap.min.css'
 

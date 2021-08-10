@@ -1,3 +1,24 @@
-.header{
+.container {
+    background-color: #DBE6FD;
+    display: flex;
+    align-items: center;
+    min-height: 30%;
+
+}
+
+.headerName {
+
+    display: flex;
+    margin-left: 10%;
+    font-weight: 900;
+}
+
+.logo {
+    margin-left: 10%;
+    display: flex;
     
+}
+
+.form {
+    display: flex;
 }
