@@ -8,7 +8,7 @@ const Header = () => {
                 <h1>BankQuick</h1>
            </div>
            <div className={classes.logo}>
-               <img src='./Assets/header/bank.png' height='100px' width='100px' alt='banklogo' />
+               <img src='./Assets/header/bank.png' alt='banklogo' />
            </div>
            <div className={classes.form}>
                 <Form />

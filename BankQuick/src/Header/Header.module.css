@@ -16,9 +16,6 @@
 .logo {
     margin-left: 10%;
     display: flex;
-    
+    padding: 1%;
 }
 
-.form {
-    display: flex;
-}

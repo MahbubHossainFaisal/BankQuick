@@ -1,0 +1,108 @@
+.body {
+    background-color: #F8F5F1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.currentBalance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currentBalanceLabel {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.currentBalanceLabel p {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.currentBalanceAmount {
+    align-self: flex-end;
+    display: flex;
+    font-size: xxx-large;
+}
+
+.transactionSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.transactionHistory {
+    display: flex;
+    background-color: white;
+    height: 60vh;
+    width: 50%;
+}
+
+.transactionModule {
+    background-color: #864000;
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+
+}
+
+.firstTwoCard {
+    display: flex;
+
+    flex-direction: row;
+    margin: 5% 5%;
+    gap: 5%;
+
+}
+
+.transferMoney {
+    display: flex;
+    justify-content: center;
+    background-color: #5AA897;
+
+    height: 20vh;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+}
+
+.requestLoan {
+    display: flex;
+    justify-content: center;
+    background-color: #1597BB;
+    height: 20vh;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+}
+
+.lastTwoCard {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    gap: 5%;
+}
+
+
+
+.withdrawAmount {
+    display: flex;
+    justify-content: center;
+    background-color: #FF7171;
+    height: 20vh;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.closeAccount {
+    display: flex;
+    justify-content: center;
+    background-color: #D44000;
+    height: 20vh;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
