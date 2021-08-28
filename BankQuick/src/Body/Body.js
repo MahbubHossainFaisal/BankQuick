@@ -1,5 +1,7 @@
 import React from 'react'
 import classes from './Body.module.css'
+import accounts from '../Data/data'
+import Transactions from './Transactions/Transactions'
 
 const Body = () => {
     return (
@@ -15,8 +17,21 @@ const Body = () => {
             </div>
            <div className={classes.transactionSection}>
                 <div className={classes.transactionHistory}>
-                    <h1> Transaction history</h1>
+                       <div>
+                        <h1> Transaction history</h1>
+                       </div>
+                    
+                    <div className={classes.transactions}>
+                       {
+                           accounts[0].movements.map((mov,i)=>{
+                              return(
+                                  <Transactions movement={mov} index={i} />
+                              )
+                           })
+                       }
+                    </div>
                 </div>
+                
                 <div className={classes.transactionModules}>
 
                     <div className={classes.firstTwoCard}>

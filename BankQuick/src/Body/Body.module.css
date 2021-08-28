@@ -33,9 +33,19 @@
 
 .transactionHistory {
     display: flex;
+    flex-direction: column;
     background-color: white;
     height: 60vh;
     width: 50%;
+    overflow: scroll;
+}
+.transactionHistory h1{
+    margin-left: 30%;
+}
+
+.transactions{
+    display: flex;
+    flex-direction: column;
 }
 
 .transactionModule {

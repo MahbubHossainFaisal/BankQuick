@@ -1,0 +1,33 @@
+.transactions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:22%;
+}
+
+.transactionTypeRed{
+    background-color: #E63E6D;
+    border-radius: 20%;
+    padding: 1%;
+    margin-left: 6%;
+    font-size: 13px;
+}
+.transactionTypeGreen{
+    background-color: #7FC8A9;
+    border-radius: 20%;
+    padding: 1%;
+    margin-left: 6%;
+    font-size: 15px;
+}
+
+.transactionDate{
+    
+    font-size: 15px;
+     
+}
+
+.transactionAmount{
+
+   font-size: 30px;
+    
+}
