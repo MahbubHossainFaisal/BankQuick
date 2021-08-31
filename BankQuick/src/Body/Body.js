@@ -1,9 +1,8 @@
 import React from 'react'
 import classes from './Body.module.css'
-import accounts from '../Data/data'
 import Transactions from './Transactions/Transactions'
 
-const Body = () => {
+const Body = (props) => {
     return (
         <div className={classes.body}>
             <div className={classes.currentBalance}>
@@ -23,7 +22,7 @@ const Body = () => {
                     
                     <div className={classes.transactions}>
                        {
-                           accounts[0].movements.map((mov,i)=>{
+                           props.accounts[0].movements.map((mov,i)=>{
                               return(
                                   <Transactions movement={mov} index={i} />
                               )

@@ -9,6 +9,8 @@
 .headerName {
 
     display: flex;
+    font-size: xxx-large;
+    font-weight: 900;
     margin-left: 10%;
     font-weight: 900;
 }

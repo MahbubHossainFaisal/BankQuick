@@ -1,0 +1,46 @@
+.summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.in{
+    font-size: 40px;
+    color: #7FC8A9;
+}
+.intxt{
+    font-size: 25px;
+    margin-right: 30px;
+    color: black;
+}
+
+.out{
+    font-size: 40px;
+    color: #E63E6D;
+}
+
+.outtxt{
+    font-size: 25px;
+    margin-right: 30px;
+    color: black;
+}
+
+.interest{
+    font-size: 40px;
+    color: #7FC8A9;
+}
+.interesttxt{
+    font-size: 25px;
+    margin-right: 30px;
+    color: black;
+}
+
+.sort{
+    background-color: yellowgreen;
+    font-size: 30px;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20%;
+    cursor: pointer;
+}
