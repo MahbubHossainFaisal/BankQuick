@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from '../Form/Form'
 import classes from './Header.module.css'
-const Header = () => {
+const Header = ({userName,password,login}) => {
     return (
         <div className={classes.container}>
            <div className={classes.headerName}>
@@ -11,7 +11,7 @@ const Header = () => {
                <img src='./Assets/header/bank.png' alt='banklogo' />
            </div>
            <div className={classes.form}>
-                <Form />
+                <Form userName={userName} Password={password} login={login} />
            </div>
         </div>
     )

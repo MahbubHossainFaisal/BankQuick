@@ -22,7 +22,7 @@ const Body = (props) => {
                     
                     <div className={classes.transactions}>
                        {
-                           props.accounts[0].movements.map((mov,i)=>{
+                           props.account.movements.map((mov,i)=>{
                               return(
                                   <Transactions movement={mov} index={i} />
                               )

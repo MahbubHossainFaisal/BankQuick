@@ -7,7 +7,7 @@ const Summary = (props) => {
                 <span className={classes.intxt}>IN</span>
                 <span>
                     {
-                        props.accounts[0].movements.filter((mov) => mov>0).reduce((ele,mov) => ele+mov)
+                        props.account.movements.filter((mov) => mov>0).reduce((ele,mov) => ele+mov)
                     }$
                 </span>
             </div>
@@ -15,7 +15,7 @@ const Summary = (props) => {
                 <span className={classes.outtxt}>OUT</span>
                 <span>
                     {
-                        Math.abs(props.accounts[0].movements.filter((mov) => mov < 0).reduce((ele, mov) => ele + mov))
+                        Math.abs(props.account.movements.filter((mov) => mov < 0).reduce((ele, mov) => ele + mov,0))
                     }$
                 </span>
             </div>
@@ -23,10 +23,10 @@ const Summary = (props) => {
                 <span className={classes.interesttxt}>INTEREST</span>
                 <span>
                     {
-                        props.accounts[0].movements.filter((mov) => mov > 0)
+                        props.account.movements.filter((mov) => mov > 0)
                         .map((deposite) => (deposite*1.2)/100 )
                         .filter((interest) => interest>=1)
-                        .reduce((acc,interest)=> acc+interest,0)
+                        .reduce((acc,interest)=> acc+interest,0).toFixed(2)
                     }$
                 </span>
             </div>
