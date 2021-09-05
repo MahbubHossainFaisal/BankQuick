@@ -5,6 +5,10 @@
     padding: 0 5%;
 }
 
+.welcomeMsg h1{
+    text-align: center;
+}
+
 .currentBalance {
     display: flex;
     justify-content: space-between;
@@ -19,7 +23,9 @@
     font-size: x-large;
     font-weight: 500;
 }
-
+.notification{
+    font-size: x-large;
+}
 .currentBalanceAmount {
     align-self: flex-end;
     display: flex;
@@ -67,9 +73,9 @@
 
 .transferMoney {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #5AA897;
-
     height: 20vh;
     width: 400px;
     border: 1px solid black;

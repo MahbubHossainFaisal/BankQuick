@@ -7,6 +7,10 @@
     gap: 10px;
 }
 
+.form form{
+    display: flex;
+}
+
 
 .userInput {
     font-size: x-large;
@@ -18,5 +22,6 @@
     font-size: x-large;
     display: flex;
     gap: 5px;
+    margin-right: 8px;
 
 }

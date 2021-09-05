@@ -1,0 +1,21 @@
+.container{
+    
+}
+.transferInputs{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+.transferLabels{
+   display: flex;
+   justify-content: space-around;
+   font-size: larger;
+}
+
+.transferButton{
+    display: flex;
+
+    justify-content: center;
+}

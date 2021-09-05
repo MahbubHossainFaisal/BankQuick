@@ -2,14 +2,17 @@
 import React from 'react'
 import classes from './Form.module.css'
 const Form = ({userName,Password,login}) => {
+
     return (
         <div className={classes.form}>
            
+                <form onSubmit={login}>
                 <div className={classes.userInput}>
                     <label htmlFor="username" id='username'>Username</label>
                     <input
                         type="text"
                         id="username"
+
                         onChange={userName}
                     />
 
@@ -17,7 +20,7 @@ const Form = ({userName,Password,login}) => {
                 <div className={classes.pinInput}>
                     <label htmlFor="password" id='password'>Password</label>
                     <input
-                        type="text"
+                        type="password"
                         id="password"
                         onChange={Password}
                     />
@@ -25,9 +28,10 @@ const Form = ({userName,Password,login}) => {
                 </div>
 
 
-                <button type="submit" className='btn btn-primary btn-lg' onClick={login}>
+                <button type="submit" className='btn btn-primary btn-lg'>
                     Login
                 </button>
+                </form>
 
         </div>
     )
