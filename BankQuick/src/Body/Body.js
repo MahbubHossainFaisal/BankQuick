@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import classes from './Body.module.css'
+import CloseAccount from './CloseAccount/CloseAccount'
 import Transactions from './Transactions/Transactions'
 import TransferMoney from './TransferMoney/TransferMoney'
 
@@ -69,6 +70,11 @@ const Body = (props) => {
                         </div>
                         <div className={classes.closeAccount}>
                             <h1>Close Account</h1>
+                            <CloseAccount 
+                            userAccount={props.account}
+                            allAccounts={props.allAccount}
+                             updateAccounts={props.updateAccounts}
+                                notify={setNotification}/>
                         </div>
                     </div>
 

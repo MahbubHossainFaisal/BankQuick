@@ -1,0 +1,21 @@
+.container{
+    
+}
+.closeInputs{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    
+}
+
+.closeLabels{
+   display: flex;
+   justify-content: space-around;
+   font-size: larger;
+}
+
+.closeButton{
+    display: flex;
+
+    justify-content: center;
+}

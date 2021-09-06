@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Accounts from '../../Data/data'
 import classes from './TransferMoney.module.css'
 const TransferMoney = (props) => {
     
@@ -51,7 +50,7 @@ const TransferMoney = (props) => {
                 
             }
             else {
-                props.notify('Amount is not valid')
+                props.notify('Account or Amount is not valid')
                 event.target.reset()
                 transferFinishHandler()
             }
@@ -67,11 +66,11 @@ const TransferMoney = (props) => {
                     <input type='text' id='transferAmount' value={transferredAmount} onChange={transferAmountHandler}  />
                 </div>
                 <div className={classes.transferLabels}>
-                    <span>Transfer to</span>
-                    <span>Amount</span>
+                    <h4>Transfer to</h4>
+                    <h4>Amount</h4>
                 </div>
                 <div className={classes.transferButton}>
-                    <button type='submit' className='btn btn-light btn-lg'  >➨</button>
+                    <button type='submit' className='btn btn-light btn-lg'  >Transfer</button>
                 </div>
                </form>
            

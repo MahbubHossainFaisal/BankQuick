@@ -2,12 +2,12 @@ import React,{useState} from 'react';
 import Header from './Header/Header';
 import Body from './Body/Body';
 import Summary from './Footer/Summary'
-import accounts from './Data/data'
+import Accounts from './Data/data'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootswatch/dist/lumen/bootstrap.min.css'
 
 function App() {
-
+  const [accounts,setAccounts] = useState(Accounts)
   const [userName,setUserName] = useState('')
   const [password,setPassword] = useState('')
   const [recievedAccount,setRecievedAccount] = useState({})
@@ -22,7 +22,9 @@ function App() {
   const updateRecievedAccountHandler = (acc) =>{
     setRecievedAccount(acc)
   }
- 
+  const updateAllAccountHandler = (accs) =>{
+    setAccounts(accs)
+  }
 
   const loginHandler = (event) =>{
     event.preventDefault();
@@ -50,7 +52,10 @@ function App() {
     <div>
      <Header userName={userNameChangeHandler} password={setPasswordHandler} login={loginHandler} />
       {!loginSuccess && <h1>Insert your valid username and password please!</h1>}
-      {loginSuccess && <Body account={recievedAccount} updateAccount={updateRecievedAccountHandler} allAccount={accounts} />}
+      {loginSuccess && <Body account={recievedAccount}
+       updateAccount={updateRecievedAccountHandler} 
+       allAccount={accounts}
+       updateAccounts={updateAllAccountHandler} />}
       {loginSuccess && <Summary account={recievedAccount} />}
     </div>
   );
