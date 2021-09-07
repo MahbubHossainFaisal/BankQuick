@@ -8,7 +8,7 @@ const Summary = (props) => {
                 <span>
                     {
                         props.account.movements.filter((mov) => mov>0).reduce((ele,mov) => ele+mov)
-                    }$
+                    }৳
                 </span>
             </div>
             <div className={classes.out}>
@@ -16,7 +16,7 @@ const Summary = (props) => {
                 <span>
                     {
                         Math.abs(props.account.movements.filter((mov) => mov < 0).reduce((ele, mov) => ele + mov,0))
-                    }$
+                    }৳
                 </span>
             </div>
             <div className={classes.interest}>
@@ -27,7 +27,7 @@ const Summary = (props) => {
                         .map((deposite) => (deposite*1.2)/100 )
                         .filter((interest) => interest>=1)
                         .reduce((acc,interest)=> acc+interest,0).toFixed(2)
-                    }$
+                    }৳
                 </span>
             </div>
 

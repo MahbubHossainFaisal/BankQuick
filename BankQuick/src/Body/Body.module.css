@@ -85,7 +85,8 @@
 
 .requestLoan {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #1597BB;
     height: 20vh;
     width: 400px;
@@ -105,8 +106,9 @@
 
 .withdrawAmount {
     display: flex;
-    justify-content: center;
-    background-color: #FF7171;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FEC260;
     height: 20vh;
     width: 400px;
     border: 1px solid black;

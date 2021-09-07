@@ -1,20 +1,20 @@
 .container{
     
 }
-.transferInputs{
+.withdrawInput{
     display: flex;
     gap: 10px;
     padding: 10px;
     font-size: 15px;
 }
 
-.transferLabels{
+.withdrawLabel{
    display: flex;
    justify-content: space-around;
    font-size: larger;
 }
 
-.transferButton{
+.withdrawButton{
     display: flex;
 
     justify-content: center;

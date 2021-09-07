@@ -16,14 +16,21 @@ const CloseAccount = (props) => {
         event.preventDefault()
         
         if(username === props.userAccount.username && pin === props.userAccount.pin){
+
             console.log(username,pin)
             const updatedAccounts = props.allAccounts.filter(acc => acc.username!== username && acc.pin !== pin)
             props.updateAccounts(updatedAccounts)
 
-            props.notify('Account deleted! Login again to check!')
+            props.notify('Account deleted! You are being logged out')
+            setTimeout(()=>{
+                event.target.reset()
+                props.loginStatus(false)
+
+            },3000)
            
         } 
         else{
+            event.target.reset()
             props.notify('Username or password not valid!')
         }
     }
@@ -40,7 +47,7 @@ const CloseAccount = (props) => {
                     <h4>Confirm Pin</h4>
                 </div>
                 <div className={classes.closeButton}>
-                    <button type='submit' className='btn btn-light btn-lg'  >Close</button>
+                    <button type='submit' className='btn btn-light btn-md'  >Close</button>
                 </div>
             </form>
 

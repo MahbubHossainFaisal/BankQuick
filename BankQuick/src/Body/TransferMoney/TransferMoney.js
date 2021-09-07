@@ -21,7 +21,7 @@ const TransferMoney = (props) => {
         setTransferredAmount('')
     }
    
-        const transferSubmitHandler = (event) => {
+    const transferSubmitHandler = (event) => {
             event.preventDefault()
           
             const recieverAccount = props.allAccount.find(acc => acc.username === transferTo)
@@ -63,14 +63,14 @@ const TransferMoney = (props) => {
                <form onSubmit={transferSubmitHandler}>
                 <div className={classes.transferInputs}>
                     <input type='text' id='transferTo' value={transferTo} onChange={transferToHandler}  />
-                    <input type='text' id='transferAmount' value={transferredAmount} onChange={transferAmountHandler}  />
+                    <input type='number' id='transferAmount' value={transferredAmount} onChange={transferAmountHandler}  />
                 </div>
                 <div className={classes.transferLabels}>
                     <h4>Transfer to</h4>
                     <h4>Amount</h4>
                 </div>
                 <div className={classes.transferButton}>
-                    <button type='submit' className='btn btn-light btn-lg'  >Transfer</button>
+                    <button type='submit' className='btn btn-light btn-md'  >Transfer</button>
                 </div>
                </form>
            

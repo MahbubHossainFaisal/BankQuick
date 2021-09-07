@@ -55,7 +55,8 @@ function App() {
       {loginSuccess && <Body account={recievedAccount}
        updateAccount={updateRecievedAccountHandler} 
        allAccount={accounts}
-       updateAccounts={updateAllAccountHandler} />}
+       updateAccounts={updateAllAccountHandler}
+       loginStatus={setLoginSuccess} />}
       {loginSuccess && <Summary account={recievedAccount} />}
     </div>
   );

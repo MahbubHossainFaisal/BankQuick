@@ -10,7 +10,7 @@ const Transactions = (props) => {
                 12/02/2021
             </div>
             <div className={classes.transactionAmount}>
-                {Math.abs(props.movement)}$
+                {Math.abs(props.movement)}৳
             </div>
         </div>
     )

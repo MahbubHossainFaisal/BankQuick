@@ -1,20 +1,23 @@
 .container{
     
 }
-.transferInputs{
+.loanInput{
+
     display: flex;
     gap: 10px;
-    padding: 10px;
+   
     font-size: 15px;
+    padding: 10px;
+    
 }
 
-.transferLabels{
+.loanLabel{
    display: flex;
    justify-content: space-around;
    font-size: larger;
 }
 
-.transferButton{
+.loanButton{
     display: flex;
 
     justify-content: center;

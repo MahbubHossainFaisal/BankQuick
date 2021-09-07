@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import classes from './Body.module.css'
 import CloseAccount from './CloseAccount/CloseAccount'
+import RequestLoan from './RequestLoan/RequestLoan'
 import Transactions from './Transactions/Transactions'
 import TransferMoney from './TransferMoney/TransferMoney'
+import WithdrawAmount from './WithdrawAmount/WithdrawAmount'
 
 const Body = (props) => {
 
@@ -28,7 +30,7 @@ const Body = (props) => {
                 </div>
                 <div className={classes.currentBalanceAmount}>
                     <p>
-                        {currentBalance}$
+                        {currentBalance}৳
                     </p>
                 </div>
             </div>
@@ -62,11 +64,21 @@ const Body = (props) => {
                         </div>
                         <div className={classes.requestLoan}>
                             <h1>Request Loan</h1>
+                            <RequestLoan
+                            userAccount={props.account}
+                            updateAccount={props.updateAccount}
+                            notify={setNotification}
+                            />
                         </div>
                     </div>
                     <div className={classes.lastTwoCard}>
                         <div className={classes.withdrawAmount}>
                             <h1>Withdraw Amount</h1>
+                            <WithdrawAmount
+                                userAccount={props.account}
+                                updateAccount={props.updateAccount}
+                                notify={setNotification}
+                            />
                         </div>
                         <div className={classes.closeAccount}>
                             <h1>Close Account</h1>
@@ -74,7 +86,8 @@ const Body = (props) => {
                             userAccount={props.account}
                             allAccounts={props.allAccount}
                              updateAccounts={props.updateAccounts}
-                                notify={setNotification}/>
+                                notify={setNotification}
+                                loginStatus={props.loginStatus}/>
                         </div>
                     </div>
 
