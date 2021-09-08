@@ -12,6 +12,7 @@ function App() {
   const [password,setPassword] = useState('')
   const [recievedAccount,setRecievedAccount] = useState({})
   const [loginSuccess,setLoginSuccess] = useState(false)
+  const [sortTransaction, setSortTransaction] = useState(false)
 
   const userNameChangeHandler = (event) =>{
     setUserName(event.target.value)
@@ -40,6 +41,7 @@ function App() {
       //console.log(findAccount)
       setRecievedAccount(findAccount)
       setLoginSuccess(true)
+      setSortTransaction(false)
       event.target.reset();
       
     }
@@ -56,8 +58,9 @@ function App() {
        updateAccount={updateRecievedAccountHandler} 
        allAccount={accounts}
        updateAccounts={updateAllAccountHandler}
-       loginStatus={setLoginSuccess} />}
-      {loginSuccess && <Summary account={recievedAccount} />}
+       loginStatus={setLoginSuccess}
+       sortSignal={sortTransaction} />}
+      {loginSuccess && <Summary account={recievedAccount} sortTransaction={sortTransaction} sortStatus={setSortTransaction} />}
     </div>
   );
 }

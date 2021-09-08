@@ -1,6 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import classes from './Summary.module.css'
 const Summary = (props) => {
+    
+    const [checker,setChecker] = useState(props.sortTransaction)
+
+    const checkerHandler = () =>{
+        setChecker(!checker)
+        props.sortStatus(checker)
+    }
     return (
         <div className={classes.summary}>
             <div className={classes.in}>
@@ -32,7 +39,7 @@ const Summary = (props) => {
             </div>
 
             <div className={classes.sort}>
-                <p>Sort</p>
+                <button className="btn btn-outline-info btn-lg" onClick={checkerHandler}>Sort Transactions</button>
             </div>
         </div>
     )

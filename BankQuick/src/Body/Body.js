@@ -11,7 +11,10 @@ const Body = (props) => {
     const [notification,setNotification] = useState('')
     const totalDeposit = props.account.movements.filter((mov)=> mov>0).reduce((sum,ele)=> sum+ele,0)
     const totalWithdraw = props.account.movements.filter((mov)=> mov<0).reduce((sum,ele) => sum+ele,0)
-
+    let accountMovementsArray = [...props.account.movements]
+    //console.log(accountMovementsArray)
+    accountMovementsArray.sort((a,b) => a-b)
+    //console.log(props.account.movements)
     const currentBalance = totalDeposit-Math.abs(totalWithdraw) //used abs because total withdraw value is negative
     
     
@@ -39,15 +42,21 @@ const Body = (props) => {
                        <div>
                         <h1> Transaction history</h1>
                        </div>
-                    
+                    {console.log(props.sortSignal)}
                     <div className={classes.transactions}>
-                       {
-                           props.account.movements.map((mov,i)=>{
-                              return(
-                                  <Transactions movement={mov} key={i} />
-                              )
-                           })
+                       { 
+                        props.sortSignal ?
+                         accountMovementsArray.map((mov,i) =>{
+                            return(
+                                <Transactions movement={mov} key={i} />
+                            )
+                         }) : props.account.movements.map((mov, i) => {
+                             return (
+                                 <Transactions movement={mov} key={i} />
+                             )
+                         })
                        }
+                       
                     </div>
                 </div>
                 
